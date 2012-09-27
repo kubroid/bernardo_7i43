@@ -1,0 +1,10 @@
+# Include your customized HAL commands here
+# The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
+
+# **** Setup of spindle speed display using pyvcp -START ****
+# **** Use COMMANDED spindle velocity from EMC because no spindle encoder was specified
+# **** COMANDED velocity is signed so we use absolute component (abs.0) to remove sign
+
+net probe-in => pyvcp.led-probe
+
+net z-offser halui.tool.length_offset.z => pyvcp.z-touch-off

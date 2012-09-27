@@ -1,0 +1,60 @@
+[ 1082.615026] RTAI[sched]: IMMEDIATE, MP, USER/KERNEL SPACE: <with RTAI OWN KTASKs>, kstacks pool size = 524288 bytes.
+[ 1082.615031] RTAI[sched]: hard timer type/freq = APIC/12500398(Hz); default timing: periodic; linear timed lists.
+[ 1082.615035] RTAI[sched]: Linux timer freq = 250 (Hz), TimeBase freq = 2000123000 hz.
+[ 1082.615037] RTAI[sched]: timer setup = 999 ns, resched latency = 2943 ns.
+[ 1082.615135] RTAI[usi]: enabled.
+[ 1082.689092] RTAI[math]: loaded.
+[ 1082.818501] hm2: loading Mesa HostMot2 driver version 0.15
+[ 1082.822902] hm2_7i43: loading HostMot2 Mesa 7i43 driver version 0.3
+[ 1082.825080]  hm2_7i43.0: firmware: requesting hm2/7i43-4/SVST4_4.BIT
+[ 1083.200864] hm2/hm2_7i43.0: 48 I/O Pins used:
+[ 1083.200872] hm2/hm2_7i43.0:     IO Pin 000 (P4-01): IOPort
+[ 1083.200875] hm2/hm2_7i43.0:     IO Pin 001 (P4-03): IOPort
+[ 1083.200879] hm2/hm2_7i43.0:     IO Pin 002 (P4-05): Encoder #0, pin B (Input)
+[ 1083.200882] hm2/hm2_7i43.0:     IO Pin 003 (P4-07): Encoder #0, pin A (Input)
+[ 1083.200885] hm2/hm2_7i43.0:     IO Pin 004 (P4-09): IOPort
+[ 1083.200888] hm2/hm2_7i43.0:     IO Pin 005 (P4-11): Encoder #0, pin Index (Input)
+[ 1083.200891] hm2/hm2_7i43.0:     IO Pin 006 (P4-13): IOPort
+[ 1083.200894] hm2/hm2_7i43.0:     IO Pin 007 (P4-15): PWMGen #0, pin Out0 (PWM or Up) (Output)
+[ 1083.200897] hm2/hm2_7i43.0:     IO Pin 008 (P4-17): IOPort
+[ 1083.200901] hm2/hm2_7i43.0:     IO Pin 009 (P4-19): PWMGen #0, pin Out1 (Dir or Down) (Output)
+[ 1083.200904] hm2/hm2_7i43.0:     IO Pin 010 (P4-21): IOPort
+[ 1083.200907] hm2/hm2_7i43.0:     IO Pin 011 (P4-23): PWMGen #0, pin Not-Enable (Output)
+[ 1083.200910] hm2/hm2_7i43.0:     IO Pin 012 (P4-25): IOPort
+[ 1083.200913] hm2/hm2_7i43.0:     IO Pin 013 (P4-27): IOPort
+[ 1083.200916] hm2/hm2_7i43.0:     IO Pin 014 (P4-29): IOPort
+[ 1083.200918] hm2/hm2_7i43.0:     IO Pin 015 (P4-31): IOPort
+[ 1083.200921] hm2/hm2_7i43.0:     IO Pin 016 (P4-33): IOPort
+[ 1083.200924] hm2/hm2_7i43.0:     IO Pin 017 (P4-35): IOPort
+[ 1083.200926] hm2/hm2_7i43.0:     IO Pin 018 (P4-37): IOPort
+[ 1083.200929] hm2/hm2_7i43.0:     IO Pin 019 (P4-39): IOPort
+[ 1083.200932] hm2/hm2_7i43.0:     IO Pin 020 (P4-41): IOPort
+[ 1083.200934] hm2/hm2_7i43.0:     IO Pin 021 (P4-43): IOPort
+[ 1083.200937] hm2/hm2_7i43.0:     IO Pin 022 (P4-45): IOPort
+[ 1083.200940] hm2/hm2_7i43.0:     IO Pin 023 (P4-47): IOPort
+[ 1083.200943] hm2/hm2_7i43.0:     IO Pin 024 (P3-01): StepGen #0, pin Step (Output)
+[ 1083.200947] hm2/hm2_7i43.0:     IO Pin 025 (P3-03): StepGen #0, pin Direction (Output)
+[ 1083.200950] hm2/hm2_7i43.0:     IO Pin 026 (P3-05): IOPort
+[ 1083.200952] hm2/hm2_7i43.0:     IO Pin 027 (P3-07): IOPort
+[ 1083.200955] hm2/hm2_7i43.0:     IO Pin 028 (P3-09): IOPort
+[ 1083.200958] hm2/hm2_7i43.0:     IO Pin 029 (P3-11): IOPort
+[ 1083.200961] hm2/hm2_7i43.0:     IO Pin 030 (P3-13): StepGen #1, pin Step (Output)
+[ 1083.200965] hm2/hm2_7i43.0:     IO Pin 031 (P3-15): StepGen #1, pin Direction (Output)
+[ 1083.200968] hm2/hm2_7i43.0:     IO Pin 032 (P3-17): IOPort
+[ 1083.200970] hm2/hm2_7i43.0:     IO Pin 033 (P3-19): IOPort
+[ 1083.200973] hm2/hm2_7i43.0:     IO Pin 034 (P3-21): IOPort
+[ 1083.200976] hm2/hm2_7i43.0:     IO Pin 035 (P3-23): IOPort
+[ 1083.200979] hm2/hm2_7i43.0:     IO Pin 036 (P3-25): StepGen #2, pin Step (Output)
+[ 1083.200982] hm2/hm2_7i43.0:     IO Pin 037 (P3-27): StepGen #2, pin Direction (Output)
+[ 1083.200985] hm2/hm2_7i43.0:     IO Pin 038 (P3-29): IOPort
+[ 1083.200988] hm2/hm2_7i43.0:     IO Pin 039 (P3-31): IOPort
+[ 1083.200991] hm2/hm2_7i43.0:     IO Pin 040 (P3-33): IOPort
+[ 1083.200994] hm2/hm2_7i43.0:     IO Pin 041 (P3-35): IOPort
+[ 1083.200997] hm2/hm2_7i43.0:     IO Pin 042 (P3-37): StepGen #3, pin Step (Output)
+[ 1083.201000] hm2/hm2_7i43.0:     IO Pin 043 (P3-39): StepGen #3, pin Direction (Output)
+[ 1083.201003] hm2/hm2_7i43.0:     IO Pin 044 (P3-41): IOPort
+[ 1083.201006] hm2/hm2_7i43.0:     IO Pin 045 (P3-43): IOPort
+[ 1083.201009] hm2/hm2_7i43.0:     IO Pin 046 (P3-45): IOPort
+[ 1083.201011] hm2/hm2_7i43.0:     IO Pin 047 (P3-47): IOPort
+[ 1083.201050] hm2/hm2_7i43.0: registered
+[ 1083.201054] hm2_7i43.0: board at (ioaddr=0x0378, ioaddr_hi=0x0778, epp_wide ON) found
