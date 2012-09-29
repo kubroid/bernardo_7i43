@@ -21,7 +21,7 @@
     </label>
     <number>
       <halpin>"z-touch-off"</halpin>
-      <format>"+004.4f"</format>
+      <format>"+7.3f"</format>
       <font>('courier 10 pitch',20)</font>
     </number>
   </hbox>
