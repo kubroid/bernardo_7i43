@@ -14,14 +14,47 @@
             <off_color>"red"</off_color>
 	</led>
      </hbox>
-  <vbox>
-    <label><text>"Z touch off"</text></label>
-    <hbox>
-      <number>
-        <halpin>"z-touch-off"</halpin>
-        <format>"+004.4f"</format>
-        <font>('courier 10 pitch',20)</font>
-      </number>
-    </hbox>
-  </vbox>
+  <hbox>
+    <label>
+      <text>"Z touch off"</text>
+      <font>('courier 10 pitch',15)</font>
+    </label>
+    <number>
+      <halpin>"z-touch-off"</halpin>
+      <format>"+004.4f"</format>
+      <font>('courier 10 pitch',20)</font>
+    </number>
+  </hbox>
+
+<image name='rev' file='rev.gif'/>
+  <image name='fwd' data="
+R0lGODlhDwASAKUAAAAAAEY6J1FELltILFVLM19UOmNWM2NXQGlcO4BdJm5hRnFjOnVoRXluWZpw
+G31yXoiAbpiDQ4qEc8J/EsCBEpKMeJWQfNeMEbWWI5uYjdmYEuubD/6kDO6qEP6oDe2wEf6sDf6x
+Drq4sv61Du+9Ev65Dui/Fv69D9bGMP7FEP7KEObUOe3VHf7SE/7ZFf7cFtfW0/zgGPzhGP/jGP/k
+GP/pGfnuIv/tG//yHOrp6O/v7vb29v///wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQJ
+CgA/ACwAAAEADwARAAAGsMCfcGdhIBYIRWUnbMIWKxvuVmNhDrBmJiLF4Wq1mMtkyPx0hK63NhOr
+SAFdBXXDAQBU2V2VckgKMjV4NwA0AC0pACcfAgYyNDQ3NzQvLYgnJSUCCy53np93IQMELQA8PKan
+qQAhAQQkq6eoqhsEEBixqqoOEDAGJaapswAcA1kPDsDCdxwOD0I6AR0joBwbcU05ARogHh4cHBcB
+OU1COQcJFBcTCQXk5U0iDwoNIvBBACH5BAkKAD8ALAAAAAAPABEAAAawwJ9wZ2EgFghFZSdswhYr
+G+5WY2EOsGYmIsXharWYy2TI/HSErrc2E6tIAV0FdcMBAFTZXZVySAoyNXg3ADQALSkAJx8CBjI0
+NDc3NC8tiCclJQILLneen3chAwQtADw8pqepACEBBCSrp6iqGwQQGLGqqg4QMAYlpqmzABwDWQ8O
+wMJ3HA4PQjoBHSOgHBtxTTkBGiAeHhwcFwE5TUI5BwkUFxMJBeTlTSIPCg0i8EEAOw=="/>
+
+  <hbox>
+    <button>
+        <halpin>"zero-z"</halpin>
+        <text>"Zero Z"</text> 
+    </button>
+    <button>
+        <halpin>"first-tool"</halpin>
+        <text>"First tool"</text> 
+    </button>
+    <button>
+        <halpin>"change-tool"</halpin>
+        <text>"Change tool"</text> 
+    </button>
+  </hbox>
+<vbox>
+    <image_bit halpin='selectimage' images='fwd rev'/>
+</vbox>
 </pyvcp>

@@ -8,3 +8,7 @@
 net probe-in => pyvcp.led-probe
 
 net z-offser halui.tool.length_offset.z => pyvcp.z-touch-off
+
+net button-mdi-command-00 halui.mdi-command-00 pyvcp.zero-z
+net button-mdi-command-01 halui.mdi-command-01 pyvcp.first-tool
+net button-mdi-command-02 halui.mdi-command-02 pyvcp.change-tool
