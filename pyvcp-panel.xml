@@ -100,7 +100,4 @@ Zqrpppx26umnoIYq6qiklmrqqaimquqqrLZKaSAAOw==
         <text>"Change tool"</text> 
     </button>
   </hbox>
-<vbox>
-    <image_bit halpin='selectimage' images='fwd rev'/>
-</vbox>
 </pyvcp>
