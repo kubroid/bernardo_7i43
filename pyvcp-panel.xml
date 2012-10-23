@@ -87,15 +87,15 @@ Zqrpppx26umnoIYq6qiklmrqqaimquqqrLZKaSAAOw==
 "/>
 
   <hbox>
-    <button images='zero-z'>
+    <button >
         <halpin>"zero-z"</halpin>
         <text>"Zero Z"</text> 
     </button>
-    <button images='first-tool'>
+    <button >
         <halpin>"first-tool"</halpin>
         <text>"First tool"</text> 
     </button>
-    <button images='next-tool'>
+    <button >
         <halpin>"change-tool"</halpin>
         <text>"Change tool"</text> 
     </button>
