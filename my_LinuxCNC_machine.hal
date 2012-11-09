@@ -121,6 +121,7 @@ net both-home-z     =>  axis.2.pos-lim-sw-in
 #*******************
 #  SPINDLE S
 #*******************
+setp   hm2_7i43.0.encoder.00.scale 35
 
 # ---PWM Generator signals/setup---
 
@@ -139,10 +140,10 @@ net spindle-enable         <=  motion.spindle-on
 net spindle-cw             <=  motion.spindle-forward
 net spindle-ccw            <=  motion.spindle-reverse
 net spindle-brake          <=  motion.spindle-brake
-net spindle-revs           =>  motion.spindle-revs
+net spindle-revs           =>  motion.spindle-revs hm2_7i43.0.encoder.00.position
 net spindle-at-speed       =>  motion.spindle-at-speed
-net spindle-vel-fb         =>  motion.spindle-speed-in
-net spindle-index-enable  <=>  motion.spindle-index-enable
+net spindle-vel-fb         =>  motion.spindle-speed-in hm2_7i43.0.encoder.00.velocity
+net spindle-index-enable  <=>  motion.spindle-index-enable hm2_7i43.0.encoder.00.index-enable
 
 # ---Setup spindle at speed signals---
 
@@ -151,7 +152,7 @@ sets spindle-at-speed true
 #  Use COMMANDED spindle velocity from LinuxCNC because no spindle encoder was specified
 #  COMMANDED velocity is signed so we use absolute component to remove sign
 
-net spindle-vel-cmd         =>    abs.spindle.in
+net spindle-vel-fb         =>    abs.spindle.in
 net absolute-spindle-vel    <=    abs.spindle.out
 
 #******************************
