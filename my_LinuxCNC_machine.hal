@@ -122,6 +122,10 @@ net both-home-z     =>  axis.2.pos-lim-sw-in
 #  SPINDLE S
 #*******************
 setp   hm2_7i43.0.encoder.00.scale 35
+setp   hm2_7i43.0.encoder.00.index-invert 0
+setp   hm2_7i43.0.encoder.00.index-mask 0
+setp   hm2_7i43.0.encoder.00.index-mask-invert 0
+setp   hm2_7i43.0.encoder.00.counter-mode 0
 
 # ---PWM Generator signals/setup---
 
