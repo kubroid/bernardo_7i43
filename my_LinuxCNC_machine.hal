@@ -54,7 +54,7 @@ setp   hm2_7i43.0.stepgen.00.position-scale  [AXIS_0]STEP_SCALE
 setp   hm2_7i43.0.stepgen.00.step_type        0
 setp   hm2_7i43.0.stepgen.00.control-type     0
 setp   hm2_7i43.0.stepgen.00.maxaccel         1250.0
-setp   hm2_7i43.0.stepgen.00.maxvel           83.3
+setp   hm2_7i43.0.stepgen.00.maxvel           85
 
 net x-pos-fb     axis.0.motor-pos-fb   <=  hm2_7i43.0.stepgen.00.position-fb
 net x-pos-cmd    axis.0.motor-pos-cmd  =>  hm2_7i43.0.stepgen.00.position-cmd
@@ -80,7 +80,7 @@ setp   hm2_7i43.0.stepgen.01.position-scale  [AXIS_1]STEP_SCALE
 setp   hm2_7i43.0.stepgen.01.step_type        0
 setp   hm2_7i43.0.stepgen.01.control-type     0
 setp   hm2_7i43.0.stepgen.01.maxaccel         1250.0
-setp   hm2_7i43.0.stepgen.01.maxvel           72.9
+setp   hm2_7i43.0.stepgen.01.maxvel           85
 
 net y-pos-fb     axis.1.motor-pos-fb   <=  hm2_7i43.0.stepgen.01.position-fb
 net y-pos-cmd    axis.1.motor-pos-cmd  =>  hm2_7i43.0.stepgen.01.position-cmd
@@ -105,8 +105,8 @@ setp   hm2_7i43.0.stepgen.02.stepspace       [AXIS_2]STEPSPACE
 setp   hm2_7i43.0.stepgen.02.position-scale  [AXIS_2]STEP_SCALE
 setp   hm2_7i43.0.stepgen.02.step_type        0
 setp   hm2_7i43.0.stepgen.02.control-type     0
-setp   hm2_7i43.0.stepgen.02.maxaccel         625.0
-setp   hm2_7i43.0.stepgen.02.maxvel           20.8
+setp   hm2_7i43.0.stepgen.02.maxaccel         1250.0
+setp   hm2_7i43.0.stepgen.02.maxvel           85
 
 net z-pos-fb     axis.2.motor-pos-fb   <=  hm2_7i43.0.stepgen.02.position-fb
 net z-pos-cmd    axis.2.motor-pos-cmd  =>  hm2_7i43.0.stepgen.02.position-cmd
