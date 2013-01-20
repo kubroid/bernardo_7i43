@@ -127,6 +127,12 @@ setp   hm2_7i43.0.encoder.00.index-mask 0
 setp   hm2_7i43.0.encoder.00.index-mask-invert 0
 setp   hm2_7i43.0.encoder.00.counter-mode 0
 
+loadrt ddt names=spindle.ddt
+addf spindle.ddt servo-thread
+net spindle-revs spindle.ddt.in
+#net X-IPS mult2.0.in0 <= spindle.ddt.out
+net spindle-vel-fb1         => spindle.ddt.out
+
 # ---PWM Generator signals/setup---
 
 setp   hm2_7i43.0.pwmgen.00.output-type 1
@@ -140,8 +146,8 @@ net spindle-enable      => hm2_7i43.0.pwmgen.00.enable
 
 loadrt scale names=rps.spindle
 addf rps.spindle servo-thread
-setp rps.spindle.gain 0.016666666666666
-net spindle-vel-cmd rps.spindle.in
+setp rps.spindle.gain 60 #0.016666666666666
+net spindle-vel-fb1 rps.spindle.in
 net spindle-vel-fb rps.spindle.out
 
 net spindle-vel-cmd-rps    <=  motion.spindle-speed-out-rps
@@ -163,7 +169,8 @@ sets spindle-at-speed true
 #  Use COMMANDED spindle velocity from LinuxCNC because no spindle encoder was specified
 #  COMMANDED velocity is signed so we use absolute component to remove sign
 
-net spindle-vel-cmd         =>    abs.spindle.in
+#net spindle-vel-cmd         =>    abs.spindle.in
+net spindle-vel-fb         =>    abs.spindle.in
 net absolute-spindle-vel    <=    abs.spindle.out
 
 #******************************
