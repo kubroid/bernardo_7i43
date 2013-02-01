@@ -138,13 +138,19 @@ net spindle-vel-fb1         => spindle.ddt.out
 setp   hm2_7i43.0.pwmgen.00.output-type 1
 setp   hm2_7i43.0.pwmgen.00.scale  [SPINDLE_9]OUTPUT_SCALE
 
+loadrt scale names=spindle.pwm.scale,rps.spindle
+addf spindle.pwm.scale servo-thread
+setp spindle.pwm.scale.gain .5
+setp spindle.pwm.scale.offset 400
 
-net spindle-vel-cmd     => hm2_7i43.0.pwmgen.00.value
-net spindle-enable      => hm2_7i43.0.pwmgen.00.enable
+net spindle-vel-cmd        => spindle.pwm.scale.in
+net spindle-vel-cmd.scaled => spindle.pwm.scale.out
+net spindle-vel-cmd.scaled => hm2_7i43.0.pwmgen.00.value
+net spindle-enable         => hm2_7i43.0.pwmgen.00.enable
 
 # ---setup spindle control signals---
 
-loadrt scale names=rps.spindle
+#loadrt scale names=rps.spindle
 addf rps.spindle servo-thread
 setp rps.spindle.gain 60 #0.016666666666666
 net spindle-vel-fb1 rps.spindle.in
