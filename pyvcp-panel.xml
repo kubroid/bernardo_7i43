@@ -100,4 +100,11 @@ Zqrpppx26umnoIYq6qiklmrqqaimquqqrLZKaSAAOw==
         <text>"Change tool"</text> 
     </button>
   </hbox>
+
+  <hbox>
+    <button >
+        <halpin>"go-home"</halpin>
+        <text>"GO home"</text> 
+    </button>
+  </hbox>
 </pyvcp>

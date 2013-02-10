@@ -142,7 +142,7 @@ setp   hm2_7i43.0.pwmgen.00.scale  [SPINDLE_9]OUTPUT_SCALE
 loadrt scale names=spindle.pwm.scale,rps.spindle
 addf spindle.pwm.scale servo-thread
 setp spindle.pwm.scale.gain .5
-setp spindle.pwm.scale.offset 1050
+setp spindle.pwm.scale.offset 1090
 
 net spindle-vel-cmd        => abs.spindle.pwm.in
 
