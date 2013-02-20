@@ -1,46 +1,34 @@
 <!DOCTYPE HID>
 <HID>
- <Device matchVID="7232" matchPID="1241" matchProduct="Alex mill pendant" />
+ <Device matchProduct="Alex mill pendant" />
  <Items>
   <Item enabled="false" type="5" index="0" usage="1" pin="DFU" usagePage="65280" />
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="false" index="1" usage="55" outputMin="-1" outputMax="1" pin="jog-wheel" usagePage="1" logicalMaxOverride="1023" >
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="false" index="1" usage="55" outputMin="-1" outputMax="1" pin="jog-wheel" usagePage="1" logicalMaxOverride="1024" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="false" index="2" usage="1" outputMin="-1" outputMax="1" pin="selector" usagePage="9" logicalMaxOverride="6" >
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="false" index="2" usage="1" outputMin="-1" outputMax="1" pin="selector" usagePage="9" logicalMaxOverride="6" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="false" index="3" usage="1" outputMin="-1" outputMax="1" pin="multiplier" usagePage="9" logicalMaxOverride="3" >
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="false" index="3" usage="1" outputMin="-1" outputMax="1" pin="multiplier" usagePage="9" logicalMaxOverride="3" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item enabled="true" type="0" index="4" usage="1" pin="enable-right-button" usagePage="9" />
-  <Item enabled="true" type="0" index="5" usage="1" pin="wheel-button" usagePage="9" />
-  <Item enabled="true" type="0" index="6" usage="1" pin="stop-button" usagePage="9" />
-  <Item enabled="true" type="0" index="7" usage="1" pin="pause-button" usagePage="9" />
-  <Item enabled="true" type="0" index="8" usage="1" pin="run-button" usagePage="9" />
-  <Item enabled="true" type="0" index="9" usage="1" pin="enable-left-button" usagePage="9" />
-  <Item enabled="true" type="0" index="10" usage="1" pin="E-stop" usagePage="9" />
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="true" index="11" usage="55" outputMin="-1" outputMax="1" pin="spindle_override" usagePage="1" logicalMaxOverride="1023" >
-   <controlPoints>
-    <point lP="0" dwLog="0" />
-    <point lP="1000" dwLog="0" />
-    <point lP="2500" dwLog="2500" />
-    <point lP="4000" dwLog="5000" />
-    <point lP="6000" dwLog="5000" />
-    <point lP="7500" dwLog="7500" />
-    <point lP="9000" dwLog="10000" />
-    <point lP="10000" dwLog="10000" />
-   </controlPoints>
-  </Item>
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="true" index="12" usage="55" outputMin="-1" outputMax="1" pin="feed_override" usagePage="1" logicalMaxOverride="1023" >
+  <Item enabled="false" type="0" index="4" usage="1" pin="enable-right-button" usagePage="9" />
+  <Item enabled="false" type="0" index="5" usage="1" pin="wheel-button" usagePage="9" />
+  <Item enabled="false" type="0" index="6" usage="1" pin="stop-button" usagePage="9" />
+  <Item enabled="false" type="0" index="7" usage="1" pin="pause-button" usagePage="9" />
+  <Item enabled="false" type="0" index="8" usage="1" pin="run-button" usagePage="9" />
+  <Item enabled="false" type="0" index="9" usage="1" pin="enable-left-button" usagePage="9" />
+  <Item enabled="false" type="0" index="10" usage="1" pin="E-stop" usagePage="9" />
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="true" index="11" usage="55" outputMin="0" outputMax="200" pin="spindle_override" usagePage="1" logicalMaxOverride="1023" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="1000" dwLog="0" />
@@ -52,7 +40,7 @@
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="true" index="13" usage="4" outputMin="-1" outputMax="1" pin="y-joystick" usagePage="1" logicalMaxOverride="1023" >
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="true" index="12" usage="55" outputMin="0" outputMax="200" pin="feed_override" usagePage="1" logicalMaxOverride="1023" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="1000" dwLog="0" />
@@ -64,7 +52,7 @@
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="true" index="14" usage="4" outputMin="-1" outputMax="1" pin="x-joystick" usagePage="1" logicalMaxOverride="1023" >
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="true" index="13" usage="4" outputMin="-1" outputMax="1" pin="y-joystick" usagePage="1" logicalMaxOverride="1023" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="1000" dwLog="0" />
@@ -76,14 +64,42 @@
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item enabled="true" type="3" index="16" usage="1000" pin="run-led" usagePage="8" />
-  <Item enabled="true" type="3" index="17" usage="1000" pin="pause-led" usagePage="8" />
-  <Item enabled="true" type="3" index="18" usage="1000" pin="stop-led" usagePage="8" />
-  <Item enabled="true" type="3" index="19" usage="1000" pin="enable-led" usagePage="8" />
-  <Item enabled="true" type="3" index="20" usage="1000" pin="LCD-backlight-led" usagePage="8" />
-  <Item enabled="true" type="3" index="21" usage="1000" pin="internal-led" usagePage="8" />
-  <Item enabled="false" type="5" index="22" usage="1" pin="1" usagePage="62500" />
-  <Item enabled="false" type="5" index="23" usage="1" pin="1" usagePage="62500" />
-  <Item enabled="true" type="4" index="1" usage="0" refreshPeriod="100" LCDProcPort="0" pin="LCD" usagePage="0" />
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="true" index="14" usage="4" outputMin="-1" outputMax="1" pin="x-joystick" usagePage="1" logicalMaxOverride="1023" >
+   <controlPoints>
+    <point lP="0" dwLog="0" />
+    <point lP="1000" dwLog="0" />
+    <point lP="2500" dwLog="2500" />
+    <point lP="4000" dwLog="5000" />
+    <point lP="6000" dwLog="5000" />
+    <point lP="7500" dwLog="7500" />
+    <point lP="9000" dwLog="10000" />
+    <point lP="10000" dwLog="10000" />
+   </controlPoints>
+  </Item>
+  <Item enabled="false" type="3" index="16" usage="1000" pin="run-led" usagePage="8" />
+  <Item enabled="false" type="3" index="17" usage="1000" pin="pause-led" usagePage="8" />
+  <Item enabled="false" type="3" index="18" usage="1000" pin="stop-led" usagePage="8" />
+  <Item enabled="false" type="3" index="19" usage="1000" pin="enable-led" usagePage="8" />
+  <Item enabled="false" type="3" index="20" usage="1000" pin="LCD-backlight-led" usagePage="8" />
+  <Item enabled="false" type="3" index="21" usage="1000" pin="internal-led" usagePage="8" />
+  <Item enabled="false" type="5" index="22" usage="1" pin="PWM2" usagePage="62500" />
+  <Item enabled="false" type="5" index="23" usage="1" pin="PWM1" usagePage="62500" />
+  <Item enabled="false" type="4" index="1" usage="0" refreshPeriod="100" LCDProcPort="0" pin="LCD" usagePage="0" >
+   <Page Number="0" Name="Page 0" >
+    <Data Format=">X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
+    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
+    <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
+    <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
+    <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
+   </Page>
+  </Item>
  </Items>
 </HID>

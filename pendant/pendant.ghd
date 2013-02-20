@@ -28,7 +28,7 @@
    <Property value="LCD" name="Name" />
    <Property value="20:1" name="Usage" />
    <Property value="4" name="Rows" />
-   <Property value="16" name="Columns" />
+   <Property value="20" name="Columns" />
    <Property value="false" name="8 Bit" />
    <Property value="0" name="Row1Address" />
    <Property value="64" name="Row2Address" />
@@ -54,7 +54,7 @@
    <Property value="true" name="Source" />
    <Property value="5" name="Current" />
   </Shape>
-  <Shape x="-584.426447574335" y="80.69464006259796" shapeId="led" rotate="270" instanceId="13" mirror="false" >
+  <Shape x="-584.426447574335" y="80.69464006259795" shapeId="led" rotate="270" instanceId="13" mirror="false" >
    <Property value="enable-led" name="Name" />
    <Property value="8:1000" name="Usage" />
    <Property value="true" name="Source" />

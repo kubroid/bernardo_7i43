@@ -1,0 +1,43 @@
+<!DOCTYPE GenericHIDDevice>
+<GenericHIDDevice>
+ <Device Manufacturer="FranksWorkshop" PID="1241" Product="Alex mill pendant" VID="7232" SerialNo="1" Release="100" />
+ <Configuration Timer2="0,8,100" BusPowered="true" Timer3="0,8,100" PowerPort="" UseStatusLEDs="None" is5Volts="true" HIDDebug="false" Interval="50" UsagePage="1" PowerConsumption="350" Usage="8" SerialDebug="0" Timer1="0,8,100" />
+ <Controls>
+  <DigitalEncoder Bits="10" Name="jog-wheel" UsagePage="1" Usage="55" PortA="PD1" PortB="PD0" />
+  <LCD Rows="4" PortE="PA2" Row0="0" Row1="64" Row2="16" Row3="80" UsagePage="20" Columns="20" PortRS="PA0" PortD0="" PortD1="" Name="LCD" PortD2="" PortD3="" PortD4="PA3" PortRW="PA1" Bus8Bit="false" PortD5="PA7" Usage="1" PortD6="PA6" PortD7="PA5" />
+  <LED Source="true" Name="run-led" UsagePage="8" Usage="1000" Port="PB0" />
+  <LED Source="true" Name="pause-led" UsagePage="8" Usage="1000" Port="PB1" />
+  <LED Source="true" Name="stop-led" UsagePage="8" Usage="1000" Port="PB2" />
+  <LED Source="true" Name="enable-led" UsagePage="8" Usage="1000" Port="PB3" />
+  <RotarySwitch Debounce="true" Encoded="false" Name="selector" UsagePage="9" Usage="1" Pullup="true" >
+   <Input Bit="1" Port="PC7" />
+   <Input Bit="2" Port="PC6" />
+   <Input Bit="3" Port="PC5" />
+   <Input Bit="4" Port="PC4" />
+   <Input Bit="5" Port="PC2" />
+   <Input Bit="6" Port="PC3" />
+   <Input Bit="7" Port="PC1" />
+  </RotarySwitch>
+  <RotarySwitch Debounce="true" Encoded="false" Name="multiplier" UsagePage="9" Usage="1" Pullup="true" >
+   <Input Bit="1" Port="PC0" />
+   <Input Bit="2" Port="PE1" />
+   <Input Bit="3" Port="PE0" />
+   <Input Bit="4" Port="PD7" />
+  </RotarySwitch>
+  <LED Source="true" Name="LCD-backlight-led" UsagePage="8" Usage="1000" Port="PA4" />
+  <Switch Debounce="true" Name="enable-right-button" UsagePage="9" Usage="1" Pullup="true" Port="PE7" />
+  <Switch Debounce="true" Name="wheel-button" UsagePage="9" Usage="1" Pullup="true" Port="PB7" />
+  <Switch Debounce="true" Name="stop-button" UsagePage="9" Usage="1" Pullup="true" Port="PD2" />
+  <Switch Debounce="true" Name="pause-button" UsagePage="9" Usage="1" Pullup="true" Port="PD3" />
+  <Switch Debounce="true" Name="run-button" UsagePage="9" Usage="1" Pullup="true" Port="PD4" />
+  <Switch Debounce="true" Name="enable-left-button" UsagePage="9" Usage="1" Pullup="true" Port="PE6" />
+  <LED Source="true" Name="internal-led" UsagePage="8" Usage="1000" Port="PD6" />
+  <Switch Debounce="true" Name="E-stop" UsagePage="9" Usage="1" Pullup="true" Port="PD5" />
+  <AnalogIn Bits="10" Name="spindle_override" UsagePage="1" Usage="55" Port="PF1" />
+  <AnalogIn Bits="10" Name="feed_override" UsagePage="1" Usage="55" Port="PF0" />
+  <PWM Resolution="100" Name="PWM2" UsagePage="62500" Usage="1" Port="PB6" />
+  <PWM Resolution="100" Name="PWM1" UsagePage="62500" Usage="1" Port="PB5" />
+  <AnalogIn Bits="10" Name="y-joystick" UsagePage="1" Usage="4" Port="PF3" />
+  <AnalogIn Bits="10" Name="x-joystick" UsagePage="1" Usage="4" Port="PF2" />
+ </Controls>
+</GenericHIDDevice>
