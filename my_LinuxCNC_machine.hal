@@ -122,7 +122,7 @@ net both-home-z     =>  axis.2.pos-lim-sw-in
 #*******************
 #  SPINDLE S
 #*******************
-setp   hm2_7i43.0.encoder.00.scale 140
+setp   hm2_7i43.0.encoder.00.scale 120
 setp   hm2_7i43.0.encoder.00.index-invert 0
 setp   hm2_7i43.0.encoder.00.index-mask 0
 setp   hm2_7i43.0.encoder.00.index-mask-invert 0
@@ -132,7 +132,8 @@ loadrt ddt names=spindle.ddt
 addf spindle.ddt servo-thread
 net spindle-revs spindle.ddt.in
 #net X-IPS mult2.0.in0 <= spindle.ddt.out
-net spindle-vel-fb1         => spindle.ddt.out
+#net spindle-vel-fb1         => spindle.ddt.out
+net spindle-vel-fb1 hm2_7i43.0.encoder.00.velocity
 
 # ---PWM Generator signals/setup---
 
@@ -158,6 +159,7 @@ addf rps.spindle servo-thread
 setp rps.spindle.gain 60 #0.016666666666666
 net spindle-vel-fb1 rps.spindle.in
 net spindle-vel-fb rps.spindle.out
+#net spindle-vel-fb hm2_7i43.0.encoder.00.velocity
 setp hm2_7i43.0.encoder.00.index-mask 1
 
 net spindle-vel-cmd-rps    <=  motion.spindle-speed-out-rps
