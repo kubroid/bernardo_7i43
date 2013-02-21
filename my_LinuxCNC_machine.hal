@@ -146,10 +146,9 @@ setp spindle.pwm.scale.gain .5
 setp spindle.pwm.scale.offset 1090
 
 net spindle-vel-cmd        => abs.spindle.pwm.in
-
-net spindle-vel-cmd.abs    => abs.spindle.pwm.out spindle.pwm.scale.in
-net spindle-vel-cmd.scaled => spindle.pwm.scale.out
-net spindle-vel-cmd.scaled => hm2_7i43.0.pwmgen.00.value
+net spindle-vel-cmd-abs       abs.spindle.pwm.out spindle.pwm.scale.in
+net spindle-vel-cmd-scaled => spindle.pwm.scale.out
+net spindle-vel-cmd-scaled => hm2_7i43.0.pwmgen.00.value
 net spindle-enable         => hm2_7i43.0.pwmgen.00.enable
 
 # ---setup spindle control signals---

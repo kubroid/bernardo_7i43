@@ -18,11 +18,11 @@
    <Property value="HalfKay" name="ProgrammerType" />
    <Property value="16000000" name="CPUClock" />
   </Shape>
-  <Shape x="171.8341148053424" y="74.58937198067639" shapeId="digitalencoder" rotate="90" instanceId="4" mirror="false" >
-   <Property value="jog-wheel" name="Name" />
+  <Shape x="171.8341148053424" y="72.58937198067639" shapeId="digitalencoder" rotate="90" instanceId="4" mirror="false" >
+   <Property value="jog" name="Name" />
    <Property value="1:55" name="Usage" />
-   <Property value="10" name="Bits" />
-   <Property value="0" name="Current" />
+   <Property value="8" name="Bits" />
+   <Property value="100" name="Current" />
   </Shape>
   <Shape x="-158.7696078431372" y="-547.1421568627451" shapeId="lcd" rotate="360" instanceId="6" mirror="false" >
    <Property value="LCD" name="Name" />
@@ -149,14 +149,14 @@
    <Property value="10" name="Bits" />
    <Property value="0" name="Current" />
   </Shape>
-  <Shape x="-350.6904170118754" y="220.1727843617545" shapeId="pwm" rotate="270" instanceId="27" mirror="false" >
+  <Shape x="-352.7312333384061" y="220.1727843617545" shapeId="pwm" rotate="270" instanceId="27" mirror="false" >
    <Property value="PWM2" name="Name" />
    <Property value="62500:1" name="Usage" />
    <Property value="10.0kHz" name="Frequency" />
    <Property value="100" name="Resolution" />
    <Property value="Timer1" name="Timer" />
   </Shape>
-  <Shape x="-480.5866743513084" y="219.5934344343985" shapeId="pwm" rotate="270" instanceId="28" mirror="false" >
+  <Shape x="-480.5866743513084" y="218.5730262711332" shapeId="pwm" rotate="270" instanceId="28" mirror="false" >
    <Property value="PWM1" name="Name" />
    <Property value="62500:1" name="Usage" />
    <Property value="10.0kHz" name="Frequency" />

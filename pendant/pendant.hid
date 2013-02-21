@@ -3,7 +3,7 @@
  <Device matchProduct="Alex mill pendant" />
  <Items>
   <Item enabled="false" type="5" index="0" usage="1" pin="DFU" usagePage="65280" />
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="false" index="1" usage="55" outputMin="-1" outputMax="1" pin="jog-wheel" usagePage="1" logicalMaxOverride="1024" >
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="false" index="1" usage="55" outputMin="-1" outputMax="1" pin="jog-wheel" usagePage="1" logicalMaxOverride="255" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="10000" dwLog="10000" />
@@ -40,7 +40,7 @@
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="true" index="12" usage="55" outputMin="0" outputMax="200" pin="feed_override" usagePage="1" logicalMaxOverride="1023" >
+  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="true" index="12" usage="55" outputMin="0" outputMax="200" pin="feed_override" usagePage="1" logicalMaxOverride="1023" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="1000" dwLog="0" />
@@ -82,8 +82,8 @@
   <Item enabled="false" type="3" index="19" usage="1000" pin="enable-led" usagePage="8" />
   <Item enabled="false" type="3" index="20" usage="1000" pin="LCD-backlight-led" usagePage="8" />
   <Item enabled="false" type="3" index="21" usage="1000" pin="internal-led" usagePage="8" />
-  <Item enabled="false" type="5" index="22" usage="1" pin="PWM2" usagePage="62500" />
-  <Item enabled="false" type="5" index="23" usage="1" pin="PWM1" usagePage="62500" />
+  <Item enabled="true" type="5" index="22" usage="1" pin="PWM2" usagePage="62500" />
+  <Item enabled="true" type="5" index="23" usage="1" pin="PWM1" usagePage="62500" />
   <Item enabled="false" type="4" index="1" usage="0" refreshPeriod="100" LCDProcPort="0" pin="LCD" usagePage="0" >
    <Page Number="0" Name="Page 0" >
     <Data Format=">X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
