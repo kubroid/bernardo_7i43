@@ -15,4 +15,4 @@ net button-mdi-command-02 halui.mdi-command-02 pyvcp.change-tool
 net button-mdi-command-03 halui.mdi-command-03 pyvcp.go-home
 
 
-loadusr -W hidcomp -ini my_LinuxCNC_machine.ini pendant.hid
+loadusr -W hidcomp -ini my_LinuxCNC_machine.ini pendant/pendant.hid

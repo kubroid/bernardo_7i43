@@ -24,7 +24,7 @@
    <Property value="8" name="Bits" />
    <Property value="100" name="Current" />
   </Shape>
-  <Shape x="-158.7696078431372" y="-547.1421568627451" shapeId="lcd" rotate="360" instanceId="6" mirror="false" >
+  <Shape x="-159.7696078431372" y="-546.1421568627451" shapeId="lcd" rotate="360" instanceId="6" mirror="false" >
    <Property value="LCD" name="Name" />
    <Property value="20:1" name="Usage" />
    <Property value="4" name="Rows" />
@@ -32,8 +32,8 @@
    <Property value="false" name="8 Bit" />
    <Property value="0" name="Row1Address" />
    <Property value="64" name="Row2Address" />
-   <Property value="16" name="Row3Address" />
-   <Property value="80" name="Row4Address" />
+   <Property value="20" name="Row3Address" />
+   <Property value="84" name="Row4Address" />
    <Property value="300" name="Current" />
   </Shape>
   <Shape x="-581.2197252140293" y="-100.5561779769526" shapeId="led" rotate="270" instanceId="10" mirror="false" >
@@ -60,15 +60,15 @@
    <Property value="true" name="Source" />
    <Property value="5" name="Current" />
   </Shape>
-  <Shape x="262.9311594202899" y="-506.8985507246377" shapeId="rotaryswitch" rotate="90" instanceId="14" mirror="false" >
+  <Shape x="161.9311594202899" y="-339.8985507246377" shapeId="rotaryswitch" rotate="90" instanceId="14" mirror="false" >
    <Property value="selector" name="Name" />
    <Property value="9:1" name="Usage" />
-   <Property value="7" name="Outputs" />
+   <Property value="6" name="Outputs" />
    <Property value="true" name="Pullup" />
    <Property value="true" name="Debounce" />
    <Property value="0" name="Current" />
   </Shape>
-  <Shape x="265.012077294686" y="-355.4057971014492" shapeId="rotaryswitch" rotate="90" instanceId="15" mirror="false" >
+  <Shape x="155.012077294686" y="-203.4057971014492" shapeId="rotaryswitch" rotate="90" instanceId="15" mirror="false" >
    <Property value="multiplier" name="Name" />
    <Property value="9:1" name="Usage" />
    <Property value="4" name="Outputs" />
@@ -152,14 +152,14 @@
   <Shape x="-352.7312333384061" y="220.1727843617545" shapeId="pwm" rotate="270" instanceId="27" mirror="false" >
    <Property value="PWM2" name="Name" />
    <Property value="62500:1" name="Usage" />
-   <Property value="10.0kHz" name="Frequency" />
+   <Property value="0.0Hz" name="Frequency" />
    <Property value="100" name="Resolution" />
    <Property value="Timer1" name="Timer" />
   </Shape>
   <Shape x="-480.5866743513084" y="218.5730262711332" shapeId="pwm" rotate="270" instanceId="28" mirror="false" >
    <Property value="PWM1" name="Name" />
    <Property value="62500:1" name="Usage" />
-   <Property value="10.0kHz" name="Frequency" />
+   <Property value="0.0Hz" name="Frequency" />
    <Property value="100" name="Resolution" />
    <Property value="Timer1" name="Timer" />
   </Shape>
@@ -185,7 +185,6 @@
   <Wire startShapeId="14" startPinId="4" endShapeId="1" endPinId="PC4" />
   <Wire startShapeId="14" startPinId="5" endShapeId="1" endPinId="PC2" />
   <Wire startShapeId="14" startPinId="6" endShapeId="1" endPinId="PC3" />
-  <Wire startShapeId="14" startPinId="7" endShapeId="1" endPinId="PC1" />
   <Wire startShapeId="1" startPinId="PB7" endShapeId="18" endPinId="In" />
   <Wire startShapeId="1" startPinId="PD2" endShapeId="19" endPinId="In" />
   <Wire startShapeId="1" startPinId="PD3" endShapeId="20" endPinId="In" />
