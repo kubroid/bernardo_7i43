@@ -1,0 +1,48 @@
+component amux4 "Select from one of four input values";
+pin in u32 sel """\
+sel, these determine which \\fBin\\fIN\\fR value is copied to \\fBout\\fR.
+""";
+pin out float out """\
+Follows the value of one of the \\fBin\\fIN\\fR values according to the two \\fBsel\\fR values
+.RS
+.TP
+\\fBsel=0\\fR,
+\\fBout\\fR follows \\fBin0\\fR
+.TP
+\\fBsel=1\\fR,
+\\fBout\\fR follows \\fBin1\\fR
+.TP
+\\fBsel=2\\fR,
+\\fBout\\fR follows \\fBin2\\fR
+.TP
+\\fBsel=3\\fR,
+\\fBout\\fR follows \\fBin3\\fR
+.RE
+""";
+pin in float in0;
+pin in float in1;
+pin in float in2;
+pin in float in3;
+function _;
+license "GPL";
+;;
+FUNCTION(_) {
+    u32 s = sel;
+    float o = in0;
+    switch(s)
+    {
+      case 0:
+         o = in0;
+         break;
+      case 1:
+         o = in1;
+         break;
+      case 2:
+         o = in2;
+         break;
+      case 3:
+         o = in3;
+         break;
+    };
+    out = o;
+}

@@ -21,12 +21,12 @@
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item enabled="false" type="0" index="4" usage="1" pin="enable-right-button" usagePage="9" />
+  <Item enabled="true" type="0" index="4" usage="1" pin="enable-right-button" usagePage="9" />
   <Item enabled="true" type="0" index="5" usage="1" pin="wheel-button" usagePage="9" />
-  <Item enabled="false" type="0" index="6" usage="1" pin="stop-button" usagePage="9" />
-  <Item enabled="false" type="0" index="7" usage="1" pin="pause-button" usagePage="9" />
-  <Item enabled="false" type="0" index="8" usage="1" pin="run-button" usagePage="9" />
-  <Item enabled="false" type="0" index="9" usage="1" pin="enable-left-button" usagePage="9" />
+  <Item enabled="true" type="0" index="6" usage="1" pin="stop-button" usagePage="9" />
+  <Item enabled="true" type="0" index="7" usage="1" pin="pause-button" usagePage="9" />
+  <Item enabled="true" type="0" index="8" usage="1" pin="run-button" usagePage="9" />
+  <Item enabled="true" type="0" index="9" usage="1" pin="enable-left-button" usagePage="9" />
   <Item enabled="true" type="0" index="10" usage="1" pin="E-stop" usagePage="9" />
   <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="false" outputType="0" type="1" useResponseCurve="true" index="11" usage="55" outputMin="0" outputMax="200" pin="spindle_override" usagePage="1" logicalMaxOverride="1023" >
    <controlPoints>
@@ -76,131 +76,101 @@
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item enabled="false" type="3" index="16" usage="1000" pin="run-led" usagePage="8" />
-  <Item enabled="false" type="3" index="17" usage="1000" pin="pause-led" usagePage="8" />
-  <Item enabled="false" type="3" index="18" usage="1000" pin="stop-led" usagePage="8" />
-  <Item enabled="false" type="3" index="19" usage="1000" pin="enable-led" usagePage="8" />
+  <Item enabled="true" type="3" index="16" usage="1000" pin="run-led" usagePage="8" />
+  <Item enabled="true" type="3" index="17" usage="1000" pin="pause-led" usagePage="8" />
+  <Item enabled="true" type="3" index="18" usage="1000" pin="stop-led" usagePage="8" />
+  <Item enabled="true" type="3" index="19" usage="1000" pin="enable-led" usagePage="8" />
   <Item enabled="true" type="3" index="20" usage="1000" pin="LCD-backlight-led" usagePage="8" />
-  <Item enabled="false" type="3" index="21" usage="1000" pin="internal-led" usagePage="8" />
+  <Item enabled="true" type="3" index="21" usage="1000" pin="internal-led" usagePage="8" />
   <Item enabled="true" type="5" index="22" usage="1" pin="PWM2" usagePage="62500" />
-  <Item enabled="false" type="5" index="23" usage="1" pin="PWM1" usagePage="62500" />
+  <Item enabled="true" type="5" index="23" usage="1" pin="PWM1" usagePage="62500" />
   <Item enabled="true" type="4" index="1" usage="0" refreshPeriod="100" LCDProcPort="0" pin="LCD" usagePage="0" >
    <Page Number="0" Name="AXIS X" >
-    <Data Format=">X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format=">X:" Row="0" Scale="0" TestData="" DisplayData="2" Col="0" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="3" Index="0" />
     <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="55.55555" DisplayData="802" Col="13" Index="1" />
     <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="3" Index="2" />
     <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="13" Index="3" />
     <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
+    <Data Format="%5.1f" Row="2" Scale="1" TestData="55" DisplayData="802" Col="5" Index="4" />
     <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
     <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
    </Page>
    <Page Number="1" Name="AXIS Y" >
     <Data Format="X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="3" Index="0" />
     <Data Format=">Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="10" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="13" Index="1" />
     <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="3" Index="2" />
     <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="13" Index="3" />
     <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
+    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="4" />
     <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
     <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
    </Page>
    <Page Number="2" Name="AXIS Z" >
     <Data Format="X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="3" Index="0" />
     <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="1" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="13" Index="1" />
     <Data Format=">Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="2" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="3" Index="2" />
     <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="555" DisplayData="105" Col="13" Index="3" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="555" DisplayData="802" Col="13" Index="3" />
     <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
     <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="4" />
     <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="5" />
-    <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="6" />
+    <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
+    <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
    </Page>
    <Page Number="3" Name="AXIS A" >
     <Data Format="X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="3" Index="0" />
     <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="13" Index="1" />
     <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="3" Index="2" />
     <Data Format=">A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="10" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="13" Index="3" />
     <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
+    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="4" />
     <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
     <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
    </Page>
-   <Page Number="4" Name="Page 0" >
-    <Data Format=">X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+   <Page Number="4" Name="Feed override" >
+    <Data Format="X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="3" Index="0" />
     <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="13" Index="1" />
     <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="3" Index="2" />
     <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="13" Index="3" />
     <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
+    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="4" />
     <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
     <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
    </Page>
-   <Page Number="5" Name="Page 0" >
-    <Data Format=">X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+   <Page Number="5" Name="Spindle override" >
+    <Data Format="X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="3" Index="0" />
     <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="802" Col="13" Index="1" />
     <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="3" Index="2" />
     <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
+    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="802" Col="13" Index="3" />
     <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
-    <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
-    <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
-   </Page>
-   <Page Number="6" Name="Page 0" >
-    <Data Format=">X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
-    <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
-    <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
-    <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
-    <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
-    <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
-    <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
-   </Page>
-   <Page Number="7" Name="Page 0" >
-    <Data Format=">X:" Row="0" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
-    <Data Format="Y:" Row="0" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="0" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
-    <Data Format="Z:" Row="1" Scale="1" TestData="" DisplayData="2" Col="1" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="3" Index="0" />
-    <Data Format="A:" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
-    <Data Format="%07.3f" Row="1" Scale="1" TestData="0" DisplayData="105" Col="13" Index="0" />
-    <Data Format="Mult:" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="0" />
+    <Data Format="%5.1f" Row="2" Scale="1" TestData="0" DisplayData="802" Col="5" Index="4" />
     <Data Format="V:" Row="2" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="%07.2f" Row="2" Scale="1" TestData="0" DisplayData="114" Col="13" Index="0" />
     <Data Format="%6:1,Jogging:2,Auto :3,MDI :b" Row="3" Scale="1" TestData="2" DisplayData="5" Col="7" Index="0" />
