@@ -1,10 +1,3 @@
-# Include your customized HAL commands here
-# The commands in this file are run after the AXIS GUI (including PyVCP panel) starts
-
-# **** Setup of spindle speed display using pyvcp -START ****
-# **** Use COMMANDED spindle velocity from EMC because no spindle encoder was specified
-# **** COMANDED velocity is signed so we use absolute component (abs.0) to remove sign
-
 loadusr -W hidcomp -ini my_LinuxCNC_machine.ini pendant/pendant.hid
 
 setp hidcomp.0.PWM2.ivalue 54
@@ -18,37 +11,38 @@ net jog-wheel-count hidcomp.0.jog-wheel.count
 net pendant_reset  hidcomp.0.E-stop.in halui.machine.off
 net pendant_reset2 hidcomp.0.E-stop.in-not halui.machine.on
 
-loadrt and2 count=6
+loadrt and2 names=and2-x,and2-y,and2-z,and2-a,and2-fo,and2-so,and2-run,and2-pause,
 
-addf and2.5 servo-thread
-addf and2.4 servo-thread
+addf and2-run servo-thread
+addf and2-pause servo-thread
 
 # program run
 # run when stopped
 #net pendant_run <= hidcomp.0.run-button.in
-net pendant_run => and2.5.in0
+net pendant_run => and2-run.in0
 net is_stopped <= halui.program.is-idle
-net is_stopped => and2.5.in1
-net do_run and2.5.out => halui.program.run halui.mode.auto
+net is_stopped => and2-run.in1
+net do_run and2-run.out => halui.program.run halui.mode.auto
 
 #step when paused
-net pendant_run => and2.4.in0
+net pendant_run => and2-pause.in0
 net ispaused <= halui.program.is-paused 
-net ispaused => and2.4.in1
-net do_step and2.4.out => halui.program.step
+net ispaused => and2-pause.in1
+net do_step and2-pause.out => halui.program.step
 
 # program run led
 net is_running halui.program.is-running
 net is_running => hidcomp.0.stop-led.out
 # program stop
 net pendant_stop halui.program.stop hidcomp.0.stop-button.in
+
 # pause
 loadrt toggle2nist
 addf toggle2nist.0 servo-thread
 loadrt toggle
 addf toggle.0 servo-thread
 
-#net pendant_pause hidcomp.0.pause-button.in => toggle.0.in
+net pendant_pause hidcomp.0.pause-button.in => toggle.0.in
 net toggled_pause toggle.0.out => toggle2nist.0.in
 net ispaused => toggle2nist.0.is-on
 net ispaused => hidcomp.0.pause-led.out
@@ -66,21 +60,23 @@ net enable_pos button-enabler.in0
 setp button-enabler.in1 1
 net enable_either button-enabler.out
 
-
 # step multiplier multiplexer
 loadrt conv_s32_u32
 addf conv-s32-u32.0 servo-thread
 
 loadrt amux4
-net multiplier-select conv-s32-u32.0.in
-net multiplier-select-u32 conv-s32-u32.0.out amux4.0.sel
-newsig multiplier-value float
-net multiplier-value amux4.0.out
+addf amux.0 servo-thread
+
 # the multipliers are xN/4 because the dial counts in quadrature
 setp amux4.0.in0 0.00025
 setp amux4.0.in1 0.0025
 setp amux4.0.in2 0.025
 setp amux4.0.in3 0.25
+
+net multiplier-select conv-s32-u32.0.in
+net multiplier-select-u32 conv-s32-u32.0.out amux4.0.sel
+newsig multiplier-value float
+net multiplier-value amux4.0.out
 
 #axis select
 loadrt select8 count=1
@@ -90,37 +86,59 @@ setp select8.0.enable true
 net axis-select select8.0.sel
 
 net X_selected select8.0.out0
-net Z_selected select8.0.out1
+net Y_selected select8.0.out1
+net Z_selected select8.0.out2
+net A_selected select8.0.out3
 net Spindle_selected select8.0.out4
 net Feed_selected select8.0.out5
-
-#jog z
-#  jog-wheel-count => axis.2.jog-count
-net jog-wheel-count axis.2.jog-counts
-#  enable_vel => axis.2.jog-vel-mode
-net enable_vel axis.2.jog-vel-mode
-#  mulitiplier_select => axis.2.jog-scale
-net multiplier-value axis.2.jog-scale
-#  enable_either && Z_Select => axis.2.jog-enable
-addf and2.0 servo-thread
-
-net enable_either and2.0.in0
-net Z_selected and2.0.in1
-net Z_jog_enable and2.0.out => axis.2.jog-enable
 
 #jog x
 #  jog-wheel-count => axis.0.jog-count
 net jog-wheel-count axis.0.jog-counts
 #  enable_vel => axis.0.jog-vel-mode
 net enable_vel axis.0.jog-vel-mode
-#  mulitiplier_select => axis.0.jog-scale
 net multiplier-value axis.0.jog-scale
 #  enable_either && X_Select => axis.0.jog-enable
-addf and2.1 servo-thread
+addf and2-x servo-thread
+net enable_either and2-x.in0
+net X_selected and2-x.in1
+net X_jog_enable and2-x.out => axis.0.jog-enable
 
-net enable_either and2.1.in0
-net X_selected and2.1.in1
-net X_jog_enable and2.1.out => axis.0.jog-enable
+#jog y
+#  jog-wheel-count => axis.1.jog-count
+net jog-wheel-count axis.1.jog-counts
+#  enable_vel => axis.1.jog-vel-mode
+net enable_vel axis.1.jog-vel-mode
+net multiplier-value axis.1.jog-scale
+#  enable_either && A_Select => axis.1.jog-enable
+addf and2-y servo-thread
+net enable_either and2-y.in0
+net Y_selected and2-y.in1
+net Y_jog_enable and2-y.out => axis.1.jog-enable
+
+#jog z
+#  jog-wheel-count => axis.2.jog-count
+net jog-wheel-count axis.2.jog-counts
+#  enable_vel => axis.2.jog-vel-mode
+net enable_vel axis.2.jog-vel-mode
+net multiplier-value axis.2.jog-scale
+#  enable_either && Z_Select => axis.2.jog-enable
+addf and2-z servo-thread
+net enable_either and2-z.in0
+net Z_selected and2-z.in1
+net Z_jog_enable and2-z.out => axis.2.jog-enable
+
+#jog a
+#  jog-wheel-count => axis.3.jog-count
+net jog-wheel-count axis.3.jog-counts
+#  enable_vel => axis.3.jog-vel-mode
+net enable_vel axis.3.jog-vel-mode
+net multiplier-value axis.3.jog-scale
+#  enable_either && A_Select => axis.3.jog-enable
+addf and2-a servo-thread
+net enable_either and2-a.in0
+net A_selected and2-a.in1
+net A_jog_enable and2-a.out => axis.3.jog-enable
 
 # feed rate override
 # jog-wheel-count => halui.feed-override-counts
@@ -128,11 +146,10 @@ net jog-wheel-count => halui.feed-override.counts
 # scale is fixed - 1 turn = 100%
 setp halui.feed-override.scale 0.0025
 # enable_either && Feed_Seleceted => halui.feed-override-count-enable
-addf and2.2 servo-thread
-
-net enable_either => and2.2.in0
-net Feed_selected => and2.2.in1
-net FeedOverride_enabled and2.2.out => halui.feed-override.count-enable
+addf and2-fo servo-thread
+net enable_either => and2-fo.in0
+net Feed_selected => and2-fo.in1
+net FeedOverride_enabled and2-fo.out => halui.feed-override.count-enable
 
 # spindle speed/spindle override
 # when in program mode, we change the spindle override.
@@ -143,8 +160,7 @@ net jog-wheel-count => halui.spindle-override.counts
 # scale is fixed - 1 turn = 100%
 setp halui.spindle-override.scale 0.0025
 # enable_either && Spindle_Seleceted => halui.spindle-override-count-enable
-addf and2.3 servo-thread
-
-net enable_either => and2.3.in0
-net Spindle_selected => and2.3.in1
-net SpindleOverride_enabled and2.3.out => halui.spindle-override.count-enable
+addf and2-so servo-thread
+net enable_either => and2-so.in0
+net Spindle_selected => and2-so.in1
+net SpindleOverride_enabled and2-so.out => halui.spindle-override.count-enable
