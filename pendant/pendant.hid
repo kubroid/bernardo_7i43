@@ -96,7 +96,7 @@
     <Data Format="A" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="% 8.3f" Row="1" Scale="1" TestData="-999.999" DisplayData="802" Col="12" Index="3" />
     <Data Format="MX" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="% 6.4f" Row="2" Scale="1" TestData=".25" DisplayData="802" Col="2" Index="4" />
+    <Data Format="% 6.3f" Row="2" Scale="4" TestData=".25" DisplayData="802" Col="2" Index="4" />
     <Data Format="S" Row="3" Scale="1" TestData="0" DisplayData="2" Col="0" Index="0" />
     <Data Format="%8.f" Row="3" Scale="60" TestData="30" DisplayData="114" Col="1" Index="0" />
     <Data Format="V" Row="3" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
@@ -113,7 +113,7 @@
     <Data Format="A" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="% 8.3f" Row="1" Scale="1" TestData="-999.999" DisplayData="802" Col="12" Index="3" />
     <Data Format="MX" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="% 6.4f" Row="2" Scale="1" TestData=".25" DisplayData="802" Col="2" Index="4" />
+    <Data Format="% 6.3f" Row="2" Scale="4" TestData=".25" DisplayData="802" Col="2" Index="4" />
     <Data Format="S" Row="3" Scale="1" TestData="0" DisplayData="2" Col="0" Index="0" />
     <Data Format="%8.f" Row="3" Scale="60" TestData="30" DisplayData="114" Col="1" Index="0" />
     <Data Format="V" Row="3" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
@@ -130,7 +130,7 @@
     <Data Format="A" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="% 8.3f" Row="1" Scale="1" TestData="-999.999" DisplayData="802" Col="12" Index="3" />
     <Data Format="MX" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="% 6.4f" Row="2" Scale="1" TestData=".25" DisplayData="802" Col="2" Index="4" />
+    <Data Format="% 6.3f" Row="2" Scale="4" TestData=".25" DisplayData="802" Col="2" Index="4" />
     <Data Format="S" Row="3" Scale="1" TestData="0" DisplayData="2" Col="0" Index="0" />
     <Data Format="%8.f" Row="3" Scale="60" TestData="30" DisplayData="114" Col="1" Index="0" />
     <Data Format="V" Row="3" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
@@ -147,7 +147,7 @@
     <Data Format="A" Row="1" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />
     <Data Format="% 8.3f" Row="1" Scale="1" TestData="-999.999" DisplayData="802" Col="12" Index="3" />
     <Data Format="MX" Row="2" Scale="1" TestData="" DisplayData="2" Col="0" Index="0" />
-    <Data Format="% 6.4f" Row="2" Scale="1" TestData=".25" DisplayData="802" Col="2" Index="4" />
+    <Data Format="% 6.3f" Row="2" Scale="4" TestData=".25" DisplayData="802" Col="2" Index="4" />
     <Data Format="S" Row="3" Scale="1" TestData="0" DisplayData="2" Col="0" Index="0" />
     <Data Format="%8.f" Row="3" Scale="60" TestData="30" DisplayData="114" Col="1" Index="0" />
     <Data Format="V" Row="3" Scale="1" TestData="0" DisplayData="2" Col="11" Index="0" />

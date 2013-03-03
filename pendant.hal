@@ -1,7 +1,8 @@
 loadusr -W hidcomp -ini my_LinuxCNC_machine.ini pendant/pendant.hid
 
 setp hidcomp.0.PWM2.ivalue 54
-setp hidcomp.0.LCD-backlight-led.out 1
+#setp hidcomp.0.LCD-backlight-led.out 1
+net machine-is-on hidcomp.0.LCD-backlight-led.out
 net axis-select hidcomp.0.selector.raw hidcomp.0.LCD.page-select
 net multiplier-select hidcomp.0.multiplier.raw
 net jog-wheel-count hidcomp.0.jog-wheel.count
