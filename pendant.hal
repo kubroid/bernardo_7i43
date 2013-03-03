@@ -65,7 +65,7 @@ loadrt conv_s32_u32
 addf conv-s32-u32.0 servo-thread
 
 loadrt amux4
-addf amux.0 servo-thread
+addf amux4.0 servo-thread
 
 # the multipliers are xN/4 because the dial counts in quadrature
 setp amux4.0.in0 0.00025
@@ -130,15 +130,15 @@ net Z_jog_enable and2-z.out => axis.2.jog-enable
 
 #jog a
 #  jog-wheel-count => axis.3.jog-count
-net jog-wheel-count axis.3.jog-counts
+#;net jog-wheel-count axis.3.jog-counts
 #  enable_vel => axis.3.jog-vel-mode
-net enable_vel axis.3.jog-vel-mode
-net multiplier-value axis.3.jog-scale
+#;net enable_vel axis.3.jog-vel-mode
+#;net multiplier-value axis.3.jog-scale
 #  enable_either && A_Select => axis.3.jog-enable
-addf and2-a servo-thread
-net enable_either and2-a.in0
-net A_selected and2-a.in1
-net A_jog_enable and2-a.out => axis.3.jog-enable
+#;addf and2-a servo-thread
+#;net enable_either and2-a.in0
+#;net A_selected and2-a.in1
+#;net A_jog_enable and2-a.out => axis.3.jog-enable
 
 # feed rate override
 # jog-wheel-count => halui.feed-override-counts
@@ -164,3 +164,13 @@ addf and2-so servo-thread
 net enable_either => and2-so.in0
 net Spindle_selected => and2-so.in1
 net SpindleOverride_enabled and2-so.out => halui.spindle-override.count-enable
+
+net pendant-x hidcomp.0.LCD.in-float-0 halui.axis.0.pos-relative
+net pendant-y hidcomp.0.LCD.in-float-1 halui.axis.1.pos-relative
+net pendant-z hidcomp.0.LCD.in-float-2 halui.axis.2.pos-relative
+#net pendant-x hidcomp.0.LCD.in-float-3 halui.axis.3.pos-relative
+
+net multiplier-value hidcomp.0.LCD.in-float-4
+
+net pendant-so halui.spindle-override.value hidcomp.0.LCD.in-float-5
+net pendant-fo halui.feed-override.value hidcomp.0.LCD.in-float-6
