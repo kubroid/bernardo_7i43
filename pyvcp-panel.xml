@@ -1,6 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pyvcp>
     <hbox>
+        <bar>
+            <halpin>"spindle-speed"</halpin>
+            <max_>5000</max_>
+        </bar>
+    </hbox>
+    <hbox>
 	<relief>RIDGE</relief>
         <bd>2</bd>
         <label>
