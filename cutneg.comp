@@ -1,0 +1,12 @@
+component cutneg;
+pin in float in;
+pin io float out;
+function _;
+license "GPLv2 or later";
+;;
+FUNCTION(_) { 
+  if(in>=0)
+    out = in;
+  else
+    out = 0;
+}

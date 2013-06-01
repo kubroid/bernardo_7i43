@@ -11,14 +11,12 @@ setp     hm2_7i43.0.pwmgen.pwm_frequency 500
 setp     hm2_7i43.0.pwmgen.pdm_frequency 6000000
 setp     hm2_7i43.0.watchdog.timeout_ns 10000000
 loadrt abs names=abs.spindle,abs.spindle.pwm
-loadrt lowpass names=lowpass.spindle
 
 addf hm2_7i43.0.read servo-thread
 addf motion-command-handler servo-thread
 addf motion-controller servo-thread
 addf abs.spindle servo-thread
 addf abs.spindle.pwm servo-thread
-addf lowpass.spindle servo-thread
 addf hm2_7i43.0.write         servo-thread
 addf hm2_7i43.0.pet_watchdog  servo-thread
 
@@ -128,11 +126,6 @@ setp   hm2_7i43.0.encoder.00.index-mask 0
 setp   hm2_7i43.0.encoder.00.index-mask-invert 0
 setp   hm2_7i43.0.encoder.00.counter-mode 0
 
-loadrt ddt names=spindle.ddt
-addf spindle.ddt servo-thread
-net spindle-revs spindle.ddt.in
-#net X-IPS mult2.0.in0 <= spindle.ddt.out
-#net spindle-vel-fb1         => spindle.ddt.out
 net spindle-vel-fb1 hm2_7i43.0.encoder.00.velocity
 
 # ---PWM Generator signals/setup---
@@ -142,23 +135,44 @@ setp   hm2_7i43.0.pwmgen.00.scale  [SPINDLE_9]OUTPUT_SCALE
 
 loadrt scale names=spindle.pwm.scale,rps.spindle
 addf spindle.pwm.scale servo-thread
-setp spindle.pwm.scale.gain .5
-setp spindle.pwm.scale.offset 1090
+setp spindle.pwm.scale.gain 1#.5
+setp spindle.pwm.scale.offset 0#1090
 
 net spindle-vel-cmd        => abs.spindle.pwm.in
 net spindle-vel-cmd-abs       abs.spindle.pwm.out spindle.pwm.scale.in
 net spindle-vel-cmd-scaled => spindle.pwm.scale.out
-net spindle-vel-cmd-scaled => hm2_7i43.0.pwmgen.00.value
+#net spindle-vel-cmd-scaled => hm2_7i43.0.pwmgen.00.value
+
+loadrt cutneg
+addf cutneg.0 servo-thread
+net pid_output                cutneg.0.in
+net pid_output_positive       cutneg.0.out hm2_7i43.0.pwmgen.00.value
 net spindle-enable         => hm2_7i43.0.pwmgen.00.enable
+
+
+# Initialize the PID 
+loadrt at_pid num_chan=1
+addf pid.0.do-pid-calcs servo-thread
+setp pid.0.Pgain        0
+setp pid.0.Igain        1
+setp pid.0.Dgain        1
+setp pid.0.bias         1090
+setp pid.0.FF0          .5
+setp pid.0.maxoutput    4000
+net spindle-enable      pid.0.enable
+
+# Attach the pid to the scale, motion, and sum
+net absolute-spindle-vel pid.0.feedback
+net spindle-vel-cmd      pid.0.command
+net pid_output           pid.0.output
+
 
 # ---setup spindle control signals---
 
-#loadrt scale names=rps.spindle
-addf rps.spindle servo-thread
-setp rps.spindle.gain 60 #0.016666666666666
-net spindle-vel-fb1 rps.spindle.in
-net spindle-vel-fb rps.spindle.out
-#net spindle-vel-fb hm2_7i43.0.encoder.00.velocity
+addf rps.spindle         servo-thread
+setp rps.spindle.gain    60
+net  spindle-vel-fb1     rps.spindle.in
+net  spindle-vel-fb      rps.spindle.out
 setp hm2_7i43.0.encoder.00.index-mask 1
 
 net spindle-vel-cmd-rps    <=  motion.spindle-speed-out-rps
@@ -169,8 +183,7 @@ net spindle-ccw            <=  motion.spindle-reverse
 net spindle-brake          <=  motion.spindle-brake
 net spindle-revs           =>  motion.spindle-revs hm2_7i43.0.encoder.00.position
 net spindle-at-speed       =>  motion.spindle-at-speed
-net spindle-vel-fb         =>  motion.spindle-speed-in # hm2_7i43.0.encoder.00.velocity
-#net spindle-vel-cmd         =>  motion.spindle-speed-in
+net spindle-vel-fb         =>  motion.spindle-speed-in
 net spindle-index-enable  <=>  motion.spindle-index-enable
 net spindle-index-enable  <=>  hm2_7i43.0.encoder.00.index-enable
 
@@ -180,8 +193,6 @@ sets spindle-at-speed true
 
 #  Use COMMANDED spindle velocity from LinuxCNC because no spindle encoder was specified
 #  COMMANDED velocity is signed so we use absolute component to remove sign
-
-#net spindle-vel-cmd         =>    abs.spindle.in
 net spindle-vel-fb         =>    abs.spindle.in
 net absolute-spindle-vel    <=    abs.spindle.out
 

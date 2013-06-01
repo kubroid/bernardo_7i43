@@ -1,0 +1,7 @@
+component val2par;
+pin in float inpin;
+pin io float outvalue = 1.0;
+function _;
+license "GPLv2 or later";
+;;
+FUNCTION(_) { outvalue = inpin; }
