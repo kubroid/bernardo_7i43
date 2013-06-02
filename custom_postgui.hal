@@ -16,20 +16,6 @@ net button-mdi-command-01 halui.mdi-command-01 pyvcp.first-tool
 net button-mdi-command-02 halui.mdi-command-02 pyvcp.change-tool
 net button-mdi-command-03 halui.mdi-command-03 pyvcp.go-home
 
-#loadrt val2par names=v2pP,v2pI,v2pD
-#addf v2pP servo-thread
-#addf v2pI servo-thread
-#addf v2pD servo-thread
-
-#net pidP1 pid.0.Pgain  v2pP.outvalue
-#net pidI1 pid.0.Igain  v2pI.outvalue
-#net pidD1 pid.0.Dgain  v2pD.outvalue
-
-#net pidP2 pyvcp.pidP   v2pP.inpin
-#net pidI2 pyvcp.pidI   v2pI.inpin
-#net pidD2 pyvcp.pidD   v2pD.inpin
-
-
 source pendant.hal
 
 

@@ -1,35 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <pyvcp>
-<vbox>
-<spinbox>
-    <halpin>"pidP"</halpin>
-    <min_>0</min_>
-    <max_>10</max_>
-    <initval>0</initval>
-    <resolution>0.01</resolution>
-    <format>"2.2f"</format>
-</spinbox>
-<spinbox>
-    <halpin>"pidI"</halpin>
-    <min_>0</min_>
-    <max_>10</max_>
-    <initval>0</initval>
-    <resolution>0.01</resolution>
-    <format>"2.2f"</format>
-</spinbox>
-<spinbox>
-    <halpin>"pidD"</halpin>
-    <min_>0</min_>
-    <max_>10</max_>
-    <initval>0</initval>
-    <resolution>0.01</resolution>
-    <format>"2.2f"</format>
-</spinbox>
-
-</vbox>
-
-
-
     <hbox>
         <bar>
             <halpin>"spindle-speed"</halpin>
