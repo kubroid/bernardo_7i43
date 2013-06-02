@@ -149,28 +149,29 @@ net spindle-vel-cmd-scaled => spindle.pwm.scale.out value-mapper.0.in
 net value-mapper-out       => value-mapper.0.out 
 net value-mapper-out          hm2_7i43.0.pwmgen.00.value
 
-loadrt cutneg
-addf cutneg.0 servo-thread
-net pid_output                cutneg.0.in
+#loadrt cutneg
+#addf cutneg.0 servo-thread
+#net pid_output                cutneg.0.in
 #net pid_output_positive       cutneg.0.out hm2_7i43.0.pwmgen.00.value
+
 net spindle-enable         => hm2_7i43.0.pwmgen.00.enable
 
 
 # Initialize the PID 
-loadrt at_pid num_chan=1
-addf pid.0.do-pid-calcs servo-thread
-setp pid.0.Pgain        0
-setp pid.0.Igain        1
-setp pid.0.Dgain        1
-setp pid.0.bias         1090
-setp pid.0.FF0          .5
-setp pid.0.maxoutput    4000
-net spindle-enable      pid.0.enable
+#loadrt at_pid num_chan=1
+#addf pid.0.do-pid-calcs servo-thread
+#setp pid.0.Pgain        0
+#setp pid.0.Igain        1
+#setp pid.0.Dgain        1
+#setp pid.0.bias         1090
+#setp pid.0.FF0          .5
+#setp pid.0.maxoutput    4000
+#net spindle-enable      pid.0.enable
 
 # Attach the pid to the scale, motion, and sum
-net absolute-spindle-vel pid.0.feedback
-net spindle-vel-cmd      pid.0.command
-net pid_output           pid.0.output
+#net absolute-spindle-vel pid.0.feedback
+#net spindle-vel-cmd      pid.0.command
+#net pid_output           pid.0.output
 
 
 # ---setup spindle control signals---
