@@ -136,7 +136,7 @@ setp   hm2_7i43.0.pwmgen.00.scale  [SPINDLE_9]OUTPUT_SCALE
 loadrt scale names=spindle.pwm.scale,rps.spindle
 addf spindle.pwm.scale servo-thread
 setp spindle.pwm.scale.gain 1#.5
-setp spindle.pwm.scale.offset 0#1090
+setp spindle.pwm.scale.offset 1090
 
 net spindle-vel-cmd        => abs.spindle.pwm.in
 net spindle-vel-cmd-abs       abs.spindle.pwm.out 
@@ -150,9 +150,9 @@ addf pid.0.do-pid-calcs servo-thread
 setp pid.0.Pgain        0
 setp pid.0.Igain        1
 setp pid.0.Dgain        1
-setp pid.0.bias         1090
-setp pid.0.FF0          1
-setp pid.0.maxoutput    4000
+setp pid.0.bias         0
+setp pid.0.FF0          0
+setp pid.0.maxoutput    2000
 net spindle-enable      pid.0.enable
 
 # Attach the pid to the scale, motion, and sum
@@ -162,15 +162,15 @@ net absolute-spindle-vel pid.0.feedback
 loadrt sum2 count=1
 addf sum2.0 servo-thread
 
-net pid_output           pid.0.output
-net pid_output           sum2.0.in1
-net spindle-vel-cmd      sum2.0.in0
-net pin_input            pid.0.command sum2.0.out
+net pid_output                pid.0.output
+net pid_output                sum2.0.in1
+net spindle-vel-cmd-abs       sum2.0.in0
+net spindle-vel-cmd-abs       pid.0.command
+net pid_output_sum            sum2.0.out
 
-
-net pid_output                spindle.pwm.scale.in
-net spindle-vel-cmd-scaled => spindle.pwm.scale.out
-net spindle-vel-cmd-scaled => hm2_7i43.0.pwmgen.00.value
+net pid_output_sum            spindle.pwm.scale.in
+net spindle-vel-cmd-scaled    spindle.pwm.scale.out
+net spindle-vel-cmd-scaled    hm2_7i43.0.pwmgen.00.value
 
 
 # ---setup spindle control signals---
