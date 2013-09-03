@@ -1,0 +1,14 @@
+o<zero-z> sub
+(G90 G53 G0 Z0)
+(G53 G0 X0 Y0)
+g49(clear tool offset)
+g91
+G38.2 Z-100 F1500
+G38.4 Z10 F200
+G38.2 Z-5 F30
+g10 l20 p1 z42.577
+g90
+g53 G0 Z0
+(G90 G53 G0 X50 Y50)
+o<zero-z> endsub
+M02

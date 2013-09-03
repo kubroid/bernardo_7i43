@@ -1,0 +1,19 @@
+#<ztop>=1
+#<zbottom>=-40
+#<depth>=2.8
+#<step>=.1
+#<feed>=2000
+g0z#<ztop>
+g91
+f#<feed>
+#<d>=0
+o1101 while [#<d> lt #<depth>]
+  g1z#<zbottom>
+  g0x+1
+  g0z-#<zbottom>
+  g0x[-1-#<step>]
+  #<d>=[#<d>+#<step>]
+o1101 endwhile
+g90
+
+m2

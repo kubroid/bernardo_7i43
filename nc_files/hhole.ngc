@@ -1,0 +1,28 @@
+; d x y toold startz endz zstepover
+o<hhole> sub
+g90
+#<d> = #1
+#<x> = #2
+#<y> = #3
+#<toold> = #4
+#<r> = [[#1 - #4] / 2] ; path radius
+#<z> = #5              ; start z
+#<endz> = #6
+#<step> = #7
+
+g0x[#<x>+#<r>]y[#<y>]
+g0z[#<z>+#<step>/2]
+
+o1101 while [#<z> gt #<endz>]
+  g3j0i[-#<r>]p1z#<z>
+  #<z>=[#<z>-#<step>]
+  o102 if [#<z> lt #<endz>]
+    #<z> = #<endz>
+  o102 endif
+o1101 endwhile
+g3j0i[-[#<r>/2]]x#<x>
+g0x#<x>y#<y>z#5
+
+o<hhole> endsub
+m2
+

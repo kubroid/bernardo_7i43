@@ -1,0 +1,42 @@
+s3000m3
+g0z0
+g0x15
+f100
+g91
+(first bortik)
+g1z-2.5
+g1z-2.5
+(go inside)
+g1x-2
+(groove height)
+g1z-3
+g0x3
+g0x-1
+(second bortik)
+g1z-2.5
+g1z-2.5
+g1x-3
+g0x4
+g0x-1
+
+(pulley2)
+
+(first bortik)
+g1z-2.5
+g1z-2.5
+(go inside)
+g1x-3
+(groove height)
+g1z-3
+g0x4
+g0x-1
+(second bortik)
+g1z-2.5
+g1z-2.5
+g1x-3
+g0x4
+g0x-1
+
+g90
+m2
+%

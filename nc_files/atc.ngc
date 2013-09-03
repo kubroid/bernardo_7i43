@@ -1,20 +1,23 @@
-o<auto-tool-change> sub
+o<atc> sub
 (G90 G53 G0 Z0)
 (G90 G53 G0 X0 Y0)
 g49
 g40
 g90
-g53 g0 z0
-(g53 g0 x135 y71)
+(g53 g0 z0)
+(g53 g0 x135 y0)
+g91
+g30z0
 g30
 G91
-G38.2 Z-200 F500
+G38.2 Z-300 F1500
 G38.4 Z20 F200
 G38.2 Z-10 F30
 #<_ToolZ>=#5063
-(G43.1 z[#<_ToolZ> - #<_ToolRefZ>])
 G43.1 z[#<_ToolZ> - #1000]
-G90 G53 G0 Z0
+G90
+(G53 G0 Z0)
+g30
 (G90 G53 G0 X50 Y50)
-o<auto-tool-change> endsub
+o<atc> endsub
 M02

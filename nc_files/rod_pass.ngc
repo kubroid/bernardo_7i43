@@ -1,0 +1,12 @@
+(call #feed #dx #dz)
+o<rod_pass> sub
+g91
+f#1
+g1x-#2
+g1z-#3
+g1x#2
+g0x1
+g0z#3
+g0x[-1 - #2]
+g90
+m2
