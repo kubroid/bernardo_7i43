@@ -15,7 +15,7 @@
     <point lP="10000" dwLog="10000" />
    </controlPoints>
   </Item>
-  <Item logicalMinOverride="0" valueType="0" reverse="false" enabled="true" outputType="0" type="1" useResponseCurve="false" index="3" usage="1" outputMin="-1" outputMax="1" pin="multiplier" usagePage="9" logicalMaxOverride="3" >
+  <Item logicalMinOverride="0" valueType="0" reverse="true" enabled="true" outputType="0" type="1" useResponseCurve="false" index="3" usage="1" outputMin="-1" outputMax="1" pin="multiplier" usagePage="9" logicalMaxOverride="3" >
    <controlPoints>
     <point lP="0" dwLog="0" />
     <point lP="10000" dwLog="10000" />

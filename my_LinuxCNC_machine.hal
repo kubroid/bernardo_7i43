@@ -6,7 +6,7 @@ loadrt trivkins
 loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[TRAJ]AXES
 loadrt probe_parport
 loadrt hostmot2
-loadrt hm2_7i43 config="firmware=hm2/7i43-4/SVST4_4.BIT num_encoders=1 num_pwmgens=1 num_3pwmgens=0 num_stepgens=4  " 
+loadrt hm2_7i43 config="firmware=hm2/7i43-4/SVST4_4.BIT num_encoders=4 num_pwmgens=1 num_3pwmgens=0 num_stepgens=4  " 
 setp     hm2_7i43.0.pwmgen.pwm_frequency 500
 setp     hm2_7i43.0.pwmgen.pdm_frequency 6000000
 setp     hm2_7i43.0.watchdog.timeout_ns 10000000
@@ -204,13 +204,13 @@ net spindle-vel-fb         =>    abs.spindle.in
 net absolute-spindle-vel    <=    abs.spindle.out
 
 # Spindle control gpio
-setp hm2_7i43.0.gpio.000.invert_output 1
-setp hm2_7i43.0.gpio.000.is_output 1
-setp hm2_7i43.0.gpio.001.invert_output 1
-setp hm2_7i43.0.gpio.001.is_output 1
+setp hm2_7i43.0.gpio.006.invert_output 1
+setp hm2_7i43.0.gpio.006.is_output 1
+setp hm2_7i43.0.gpio.008.invert_output 1
+setp hm2_7i43.0.gpio.008.is_output 1
 
-net spindle-enable hm2_7i43.0.gpio.000.out
-net spindle-ccw hm2_7i43.0.gpio.001.out
+net spindle-enable hm2_7i43.0.gpio.006.out
+net spindle-ccw hm2_7i43.0.gpio.008.out
 #******************************
 # connect miscellaneous signals
 #******************************
@@ -258,7 +258,7 @@ setp hm2_7i43.0.gpio.046.invert_output 1
 
 net coolant-mist      <=  iocontrol.0.coolant-mist
 net coolant-flood     <=  iocontrol.0.coolant-flood
-net coolant-flood         hm2_7i43.0.gpio.046.out
+#net coolant-flood         hm2_7i43.0.gpio.046.out
 
 #  ---probe signal---
 
