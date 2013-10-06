@@ -49,10 +49,10 @@ net mult-out2  select8.0.out2 => or2.1.in0
 net mult-out3  select8.0.out3 => or2.0.in1
 net mult-out3 or2.1.in1
 
-setp mux4.0.in0 0.01
-setp mux4.0.in1 0.1
-setp mux4.0.in2 1
-setp mux4.0.in3 10
+setp mux4.0.in3 0.01
+setp mux4.0.in2 0.1
+setp mux4.0.in1 1
+setp mux4.0.in0 10
 
 net muxsel0 or2.0.out mux4.0.sel0
 net muxsel1 or2.1.out mux4.0.sel1

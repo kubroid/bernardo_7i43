@@ -69,10 +69,10 @@ loadrt amux4
 addf amux4.0 servo-thread
 
 # the multipliers are xN/4 because the dial counts in quadrature
-setp amux4.0.in0 0.00025
-setp amux4.0.in1 0.0025
-setp amux4.0.in2 0.025
-setp amux4.0.in3 0.25
+setp amux4.0.in3 0.00025
+setp amux4.0.in2 0.0025
+setp amux4.0.in1 0.025
+setp amux4.0.in0 0.25
 
 net multiplier-select conv-s32-u32.0.in
 net multiplier-select-u32 conv-s32-u32.0.out amux4.0.sel
@@ -175,3 +175,6 @@ net multiplier-value hidcomp.0.LCD.in-float-4
 
 net pendant-so halui.spindle-override.value hidcomp.0.LCD.in-float-5
 net pendant-fo halui.feed-override.value hidcomp.0.LCD.in-float-6
+
+#net absolute-spindle-vel hidcomp.0.LCD.in-float-7
+#net pendant-v moyion.current-vel hidcomp.0.LCD.in-float-8
